@@ -1,7 +1,7 @@
 {
   "name": "slack-ts",
   "version": "1.0.0",
-  "description": "A Slack API written in typescript",
+  "description": "A Slack API written in TypeScript",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -16,12 +16,16 @@
     "url": "https://stephencavaliere.io"
   },
   "scripts": {
+    "clean": "ts-node scripts/clean-dist.ts",
     "lint": "tslint -c 'tslint.json' --exclude 'node_modules/**/*' --exclude 'dist/**/*' '**/*.ts*'",
     "build": "tsc --noUnusedLocals"
   },
   "dependencies": {},
   "devDependencies": {
-    "tslint": "4.0.2",
+    "@types/del": "2.2.31",
+    "del": "2.2.2",
+    "ts-node": "2.0.0",
+    "tslint": "4.2.0",
     "typescript": "2.1.4"
   }
 }
